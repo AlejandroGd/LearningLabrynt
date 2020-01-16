@@ -8,6 +8,13 @@ public class ValueSelector : MonoBehaviour
 {
     [SerializeField] Slider slider;
     [SerializeField] TextMeshProUGUI valueText;
+    [SerializeField] float defaultValue = 1;
+
+    private void Start()
+    {
+        slider.value = defaultValue;
+        UpdateSliderValueText();
+    }
 
     public float GetInverse()
     {
